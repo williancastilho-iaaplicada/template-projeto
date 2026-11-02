@@ -8,7 +8,7 @@ source "$(dirname "$0")/_projeto.sh"
 TITLE="${1:?título / title}"; BODY_FILE="${2:?arquivo do corpo / body file}"
 BRANCH="$(git branch --show-current)"
 [ "$BRANCH" = "main" ] && { echo "❌ Não abra PR a partir da main / Do not open a PR from main"; exit 1; }
-grep -q "Resumo para o negócio / Business summary" "$BODY_FILE" || { echo "❌ Falta o resumo de negócio / Business summary missing"; exit 1; }
+python3 "$ROOT/scripts/verificar-resumo.py" < "$BODY_FILE" || { echo "❌ Corrija o corpo do PR antes de abrir / Fix the PR body before opening"; exit 1; }
 git push -u origin "$BRANCH"
 URL="$(gh pr create --repo "$OWNER/$REPO" --base main --head "$BRANCH" --title "$TITLE" --body-file "$BODY_FILE" --assignee "@me")"
 gh project item-add "$PROJECT_NUMBER" --owner "$OWNER" --url "$URL" >/dev/null || true
