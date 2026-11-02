@@ -1,6 +1,6 @@
 <!--
-🇧🇷 Preencha todas as seções em PT-BR e EN. Não apague os títulos: a verificação automática confere se eles existem e se a confirmação final está toda marcada.
-🇺🇸 Fill every section in PT-BR and EN. Do not remove the headings: the automated check verifies they exist and that the final confirmation is fully checked.
+🇧🇷 Preencha todas as seções em PT-BR e EN. Não apague os títulos: a verificação (scripts/verificar-pr.sh) confere se eles existem e se a confirmação final está toda marcada.
+🇺🇸 Fill every section in PT-BR and EN. Do not remove the headings: the check (scripts/verificar-pr.sh) verifies they exist and that the final confirmation is fully checked.
 -->
 
 ## 🔗 Issues

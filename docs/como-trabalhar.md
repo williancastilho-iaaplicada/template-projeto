@@ -11,7 +11,8 @@
 3. **App GitHub Mobile** para acompanhar:
    - **Board de backlog** (link no README): Todo = próximos passos, In Progress = em andamento/em revisão, Done = feito.
    - **Pull requests**: leia o **Resumo para o negócio** no fim do PR. Se o veredito for 🟢 e a confirmação estiver toda marcada, aprove com **Squash and merge**.
-4. Nada entra na `main` sem o seu merge.
+4. Nada entra na `main` sem o seu merge. O merge só é liberado com o status **business-summary ✅** no PR.
+5. Se você editar o texto de um PR pelo celular, peça ao Claude: "roda a verificação do PR N". A verificação roda na VPS, não no GitHub Actions.
 
 ### Pelo notebook
 - `ssh vps` e depois `cc` abre a sessão tmux da VPS. Entre na pasta do projeto e rode `claude`.
@@ -39,7 +40,8 @@ Ideia → brainstorm (spec) → plano → tarefas no board → branch → códig
 1. **Claude app → Code tab → `srv2120199` environment** (the VPS). Open a session in this project's folder (`~/projetos/<name>`).
 2. Ask in plain language: "What's the status and what's next?", "Take the next backlog task and do it.", "New idea: … let's brainstorm."
 3. **GitHub Mobile**: follow the **backlog board** (link in the README) and review **pull requests** by reading the **Business summary** at the end. If the verdict is 🟢 and every confirmation item is checked, approve with **Squash and merge**.
-4. Nothing reaches `main` without your merge.
+4. Nothing reaches `main` without your merge, and merge requires the **business-summary ✅** status on the PR.
+5. If you edit a PR body from the phone, ask Claude: "run the PR check for PR N". The check runs on the VPS, not on GitHub Actions.
 
 ### From the laptop
 - `ssh vps`, then `cc` to attach to the VPS tmux session. Go to the project folder and run `claude`.
